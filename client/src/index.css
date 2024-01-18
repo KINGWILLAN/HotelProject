@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .small-heading {
+    @apply text-[27px] font-lato text-gray-800 font-semibold;
+  }
+  .smaller-heading {
+    @apply text-[23px] font-lato text-gray-700 font-normal;
+  }
+  .btn-icon {
+    @apply outline-none border-none bg-gray-500/40 hover:bg-gray-600/50 hover:scale-105 w-10 h-10 rounded-full flex items-center justify-center;
+  }
+  .checking-date {
+    @apply border-none outline-none text-[16px] text-gray-800 font-normal font-lato;
+  }
+  .small-paragraph {
+    @apply text-[16px] text-gray-500 py-4;
+  }
+  .footer-links {
+    @apply py-4 md:py-2 space-y-4 text-xs text-gray-800;
+  }
+  .link-title {
+    @apply font-bold text-sm;
+  }
+  .footer-link {
+    @apply block cursor-pointer text-gray-600 hover:text-gray-800 hover:text-sm;
+  }
+}

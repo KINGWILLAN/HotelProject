@@ -1,0 +1,47 @@
+The application's backend was developed using Express.js, with MongoDB serving as the database and Mongoose functioning as the ORM to adhere to RESTful API principles.
+
+The starting point of the backend is index.js, and the entire backend logic is contained within the src folder. The breakdown of the source folder is detailed below:
+
+- **server.js:** This file serves as the configuration hub for the server, handling tasks such as server configuration, connecting to the MongoDB database, implementing error middleware, and managing CORS settings.
+
+- **config folder:** This directory contains environment variables for the application. It includes dev.js for development variables and prod.js for production variables, both exported from keys.js to be accessible throughout the application.
+
+- **models folder:** This section houses database schemas for entities like users and services. It defines the schema and utility functions for interacting with MongoDB, as well as reusable functions applicable anywhere in the project.
+
+- **controller folder:** This directory encompasses asynchronous functions responsible for performing CRUD operations and application business logic. It includes controllers for users, services, and uploads (for obtaining presigned URLs on Amazon AWS).
+
+- **routers:** These are the routes providing access to the functions in the controllers. Users privileged with the necessary roles can interact with the RESTful API by utilizing these routes.
+
+- **middlewares folder:** This section includes the authMiddleware for user authentication and errorMiddleware for handling errors within the Express application.
+
+- **services:** This folder includes services like the email verification service.
+
+- **Utils folder:** This section contains utility functions and variables shared across the server project. It also houses the database connection function, among other utilities.
+
+In addition, the package.json file provides information about the project's dependencies and scripts:
+
+- **Dependencies:**
+
+  - aws-sdk: ^2.1535.0
+  - bcryptjs: ^2.4.3
+  - cookie-parser: ^1.4.6
+  - cors: ^2.8.5
+  - dotenv: ^16.3.1
+  - express: ^4.18.2
+  - express-validator: ^7.0.1
+  - helmet: ^7.1.0
+  - http-errors: ^2.0.0
+  - jsonwebtoken: ^9.0.2
+  - mongoose: ^8.0.4
+  - nodemailer: ^6.9.8
+  - uuid: ^9.0.1
+  - validator: ^13.11.0
+
+- **DevDependencies:**
+  - eslint: ^8.56.0
+  - eslint-config-google: ^0.14.0
+  - eslint-plugin-node: ^11.1.0
+  - morgan: ^1.10.0
+  - nodemon: ^3.0.2
+
+These dependencies and scripts are crucial for the proper functioning and development workflow of the backend application.
