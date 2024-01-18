@@ -13,6 +13,7 @@ import { errorMiddleware } from "./middlewares/errorMiddleware.js";
 import uploadRouter from "./routes.js/uploadRoutes.js";
 import serviceRouter from "./routes.js/serviceRoutes.js";
 
+console.log(keys.CLIENT_url);
 const app = express();
 
 // use JSON
